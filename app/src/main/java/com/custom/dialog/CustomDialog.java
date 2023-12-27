@@ -1,6 +1,6 @@
 package com.custom.dialog;
 
-import static com.custom.dialog.CustomDialogType.ONLY_TEXT;
+
 
 import android.app.Dialog;
 import android.content.Context;
@@ -18,11 +18,10 @@ import androidx.annotation.NonNull;
 
 public class CustomDialog  extends Dialog  {
 
-
     Dialog dialog;
 
-    private CustomHelper customHelper;
-    private CustomDialogType type;
+    private final CustomHelper customHelper;
+    private final CustomDialogType type;
     public CustomDialog(@NonNull Context context, CustomDialogType type) {
         super(context);
         this.type = type;
@@ -95,7 +94,6 @@ public class CustomDialog  extends Dialog  {
 
 
     }
-
 
     private void setDialogSize(){
         Window window = getWindow();
