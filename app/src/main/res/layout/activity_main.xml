@@ -9,30 +9,36 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/onlyTxt"
+        android:id="@+id/baseDialogBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Only Text"/>
+        android:text="Base Dialog"/>
 
     <Button
-        android:id="@+id/oneBtn"
+        android:id="@+id/infoDialogBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="One Button"/>
-
-
-    <Button
-        android:id="@+id/twoBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Two Buttons"/>
+        android:text="Info Dialog"/>
 
 
     <Button
-        android:id="@+id/checkBox"
+        android:id="@+id/approvalDialogBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Check Box And Buttons"/>
+        android:text="Approval Dialog"/>
 
+
+    <Button
+        android:id="@+id/resetDialogBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Dialog"/>
+
+
+    <Button
+        android:id="@+id/buttonsDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buttons Dialog"/>
 
 </LinearLayout>

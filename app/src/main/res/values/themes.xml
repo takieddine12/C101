@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.CustomDialog" parent="Base.Theme.CustomDialog" />
+
+    <style name="custom_style_dialog">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
 </resources>
