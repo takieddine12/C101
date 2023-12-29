@@ -28,7 +28,6 @@ public class CustomResetDialog extends CustomBaseDialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.custom_reset_dialog_layout);
 
-        Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_bg_shape);
 
         TextView messageTextView = findViewById(R.id.messageTextView);
         CheckBox checkBox = findViewById(R.id.checkBox);

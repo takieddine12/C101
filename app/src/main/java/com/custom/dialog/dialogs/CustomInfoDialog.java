@@ -26,7 +26,6 @@ public class CustomInfoDialog extends CustomBaseDialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.custom_info_dialog_layout);
-        Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_bg_shape);
 
         TextView messageTextView = findViewById(R.id.messageTextView);
         Button okButton = findViewById(R.id.okBtn);

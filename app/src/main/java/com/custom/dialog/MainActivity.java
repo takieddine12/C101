@@ -15,19 +15,17 @@ import com.custom.dialog.dialogs.CustomResetDialog;
 
 public class MainActivity extends AppCompatActivity  {
 
-    private Button baseDialogBtn, infoDialogBtn, approvalDialogBtn, resetDialogBtn,buttonsDialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        baseDialogBtn = findViewById(R.id.baseDialogBtn);
-        infoDialogBtn = findViewById(R.id.infoDialogBtn);
-        approvalDialogBtn = findViewById(R.id.approvalDialogBtn);
-        resetDialogBtn = findViewById(R.id.resetDialogBtn);
-        buttonsDialog = findViewById(R.id.buttonsDialog);
+        Button baseDialogBtn = findViewById(R.id.baseDialogBtn);
+        Button infoDialogBtn = findViewById(R.id.infoDialogBtn);
+        Button approvalDialogBtn = findViewById(R.id.approvalDialogBtn);
+        Button resetDialogBtn = findViewById(R.id.resetDialogBtn);
+        Button buttonsDialog = findViewById(R.id.buttonsDialog);
 
         baseDialogBtn.setOnClickListener(v -> {
             new CustomBaseDialog(MainActivity.this).show();

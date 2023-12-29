@@ -28,7 +28,6 @@ public class CustomButtonsDialog extends CustomBaseDialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.custom_buttons_dialog_layout);
 
-        Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_bg_shape);
 
         TextView messageTextView = findViewById(R.id.messageTextView);
         Button cancelBtn = findViewById(R.id.cancelBtn);

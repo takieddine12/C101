@@ -26,8 +26,6 @@ public class CustomApprovalDialog extends CustomBaseDialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.custom_approval_dialog_layout);
 
-        Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_bg_shape);
-
         TextView messageTextView = findViewById(R.id.messageTextView);
         Button okButton = findViewById(R.id.okBtn);
         Button cancelButton = findViewById(R.id.cancelBtn);
