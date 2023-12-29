@@ -16,7 +16,7 @@ import com.custom.dialog.R;
 
 import java.util.Objects;
 
-public class CustomApprovalDialog extends Dialog {
+public class CustomApprovalDialog extends CustomBaseDialog {
     public CustomApprovalDialog(@NonNull Context context) {
         super(context);
     }
@@ -24,7 +24,6 @@ public class CustomApprovalDialog extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.custom_approval_dialog_layout);
 
         Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_bg_shape);
@@ -50,18 +49,7 @@ public class CustomApprovalDialog extends Dialog {
         });
 
 
-        setDialogSize();
     }
 
 
-    private void setDialogSize(){
-        Window window = getWindow();
-        if (window != null) {
-            WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-            layoutParams.copyFrom(window.getAttributes());
-            layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-            layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
-            window.setAttributes(layoutParams);
-        }
-    }
 }

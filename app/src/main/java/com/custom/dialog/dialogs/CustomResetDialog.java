@@ -18,7 +18,7 @@ import com.custom.dialog.R;
 
 import java.util.Objects;
 
-public class CustomResetDialog extends Dialog {
+public class CustomResetDialog extends CustomBaseDialog {
     public CustomResetDialog(@NonNull Context context) {
         super(context);
     }
@@ -26,7 +26,6 @@ public class CustomResetDialog extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.custom_reset_dialog_layout);
 
         Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_bg_shape);
@@ -54,17 +53,7 @@ public class CustomResetDialog extends Dialog {
             }
         });
 
-        setDialogSize();
+
     }
 
-    private void setDialogSize(){
-        Window window = getWindow();
-        if (window != null) {
-            WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-            layoutParams.copyFrom(window.getAttributes());
-            layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-            layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
-            window.setAttributes(layoutParams);
-        }
-    }
 }

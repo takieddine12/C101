@@ -16,7 +16,7 @@ import com.custom.dialog.R;
 
 import java.util.Objects;
 
-public class CustomInfoDialog extends Dialog {
+public class CustomInfoDialog extends CustomBaseDialog {
     public CustomInfoDialog(@NonNull Context context) {
         super(context);
     }
@@ -25,9 +25,7 @@ public class CustomInfoDialog extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.custom_info_dialog_layout);
-
         Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_bg_shape);
 
         TextView messageTextView = findViewById(R.id.messageTextView);
@@ -43,17 +41,6 @@ public class CustomInfoDialog extends Dialog {
         });
 
 
-        setDialogSize();
     }
 
-    private void setDialogSize(){
-        Window window = getWindow();
-        if (window != null) {
-            WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-            layoutParams.copyFrom(window.getAttributes());
-            layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-            layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
-            window.setAttributes(layoutParams);
-        }
-    }
 }
