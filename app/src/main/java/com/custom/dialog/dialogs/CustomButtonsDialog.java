@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.custom.dialog.Extras.Utils;
 import com.custom.dialog.R;
 
 import java.util.Objects;
@@ -36,7 +37,7 @@ public class CustomButtonsDialog extends CustomBaseDialog {
 
 
 
-        messageTextView.setText("This is a custom buttons dialog text");
+        messageTextView.setText(Utils.getTitle());
 
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override

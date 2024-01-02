@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.custom.dialog.Extras.Utils;
 import com.custom.dialog.R;
 
 import java.util.Objects;
@@ -33,7 +34,7 @@ public class CustomResetDialog extends CustomBaseDialog {
         CheckBox checkBox = findViewById(R.id.checkBox);
         Button okBtn = findViewById(R.id.okBtn);
 
-        messageTextView.setText("This is a custom reset dialog text");
+        messageTextView.setText(Utils.getTitle());
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

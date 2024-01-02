@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.custom.dialog.Extras.Utils;
 import com.custom.dialog.R;
 
 import java.util.Objects;
@@ -30,7 +31,7 @@ public class CustomInfoDialog extends CustomBaseDialog {
         TextView messageTextView = findViewById(R.id.messageTextView);
         Button okButton = findViewById(R.id.okBtn);
 
-        messageTextView.setText("This is a custom info dialog text");
+        messageTextView.setText(Utils.getTitle());
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

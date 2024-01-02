@@ -12,11 +12,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
+import com.custom.dialog.Extras.Utils;
 import com.custom.dialog.R;
 
 import java.util.Objects;
 
 public class CustomBaseDialog extends Dialog {
+
+
     public CustomBaseDialog(@NonNull Context context) {
         super(context);
     }
@@ -30,7 +33,7 @@ public class CustomBaseDialog extends Dialog {
         Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_insets);
 
         TextView messageTextView = findViewById(R.id.messageTextView);
-        messageTextView.setText("This is a custom base dialog text");
+        messageTextView.setText(Utils.getTitle());
 
         setDialogSize();
     }
@@ -47,4 +50,6 @@ public class CustomBaseDialog extends Dialog {
             window.setAttributes(layoutParams);
         }
     }
+
+
 }

@@ -12,11 +12,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.custom.dialog.Extras.Utils;
 import com.custom.dialog.R;
 
 import java.util.Objects;
 
 public class CustomApprovalDialog extends CustomBaseDialog {
+
+
     public CustomApprovalDialog(@NonNull Context context) {
         super(context);
     }
@@ -30,7 +33,7 @@ public class CustomApprovalDialog extends CustomBaseDialog {
         Button okButton = findViewById(R.id.okBtn);
         Button cancelButton = findViewById(R.id.cancelBtn);
 
-        messageTextView.setText("This is a custom approval dialog text");
+        messageTextView.setText(Utils.getTitle());
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
