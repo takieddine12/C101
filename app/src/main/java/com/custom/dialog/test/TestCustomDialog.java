@@ -21,13 +21,18 @@ import java.util.Objects;
 
 public class TestCustomDialog extends Dialog {
 
-    private String title;
-    private DialogType dialogType;
+    private final String cbText;
+    private final String header;
+    private final String title;
+    private final DialogType dialogType;
 
-    public TestCustomDialog(@NonNull Context context, DialogType dialogType, String title) {
+    public TestCustomDialog(@NonNull Context context, DialogType dialogType,
+                            String title , String header , String cbText) {
         super(context);
         this.dialogType = dialogType;
         this.title = title;
+        this.header = header;
+        this.cbText = cbText;
     }
 
     @Override
@@ -38,18 +43,21 @@ public class TestCustomDialog extends Dialog {
         Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_insets);
 
         TextView messageTextView = findViewById(R.id.messageTextView);
+        TextView headerTextView = findViewById(R.id.headerTextView);
         CheckBox checkBox = findViewById(R.id.checkBox);
         Button cancel = findViewById(R.id.cancelBtn);
         Button ok = findViewById(R.id.okBtn);
         Button ok2 = findViewById(R.id.okBtn2);
 
         messageTextView.setText(title);
+        headerTextView.setText(header);
         setButtonVisibility(checkBox,cancel,ok,ok2);
 
         checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             String message = isChecked ? "Checked" : "Unchecked";
             Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
         });
+        checkBox.setText(cbText);
         ok.setOnClickListener(v -> showToastAndDismiss("TOAST 1"));
         ok2.setOnClickListener(v -> showToastAndDismiss("TOAST 2"));
         cancel.setOnClickListener(v -> showToastAndDismiss("TOAST 3"));

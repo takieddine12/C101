@@ -31,19 +31,24 @@ public class MainActivity extends AppCompatActivity  {
         Button buttonsDialog = findViewById(R.id.buttonsDialog);
 
         baseDialogBtn.setOnClickListener(v -> {
-            new TestCustomDialog(MainActivity.this, DialogType.FIRST,"Title 1").show();
+            new TestCustomDialog(MainActivity.this,
+                    DialogType.FIRST,"Lorem Ipsum Title 1","Lorem Ipsum Header 1",null).show();
         });
         infoDialogBtn.setOnClickListener(v -> {
-            new TestCustomDialog(MainActivity.this, DialogType.SECOND,"Title 2").show();
+            new TestCustomDialog(MainActivity.this,
+                    DialogType.SECOND,"Lorem Ipsum Title 2","Lorem Ipsum Header 2",null).show();
         });
         approvalDialogBtn.setOnClickListener(v -> {
-            new TestCustomDialog(MainActivity.this, DialogType.THIRD,"Title 3").show();
+            new TestCustomDialog(MainActivity.this,
+                    DialogType.THIRD,"Lorem Ipsum Title 3","Lorem Ipsum Header 3",null).show();
         });
         resetDialogBtn.setOnClickListener(v -> {
-            new TestCustomDialog(MainActivity.this, DialogType.FOURTH,"Title 4").show();
+            new TestCustomDialog(MainActivity.this,
+                    DialogType.FOURTH,"Lorem Ipsum Title 4","Lorem Ipsum Header 4","Reset Dialog CHECK BOX").show();
         });
         buttonsDialog.setOnClickListener(v -> {
-            new TestCustomDialog(MainActivity.this, DialogType.FIFTH,"Title 5").show();
+            new TestCustomDialog(MainActivity.this,
+                    DialogType.FIFTH,"Lorem Ipsum Title 5","Lorem Ipsum Header 5",null).show();
         });
 
 
