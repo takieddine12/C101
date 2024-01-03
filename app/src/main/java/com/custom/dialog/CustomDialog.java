@@ -1,4 +1,4 @@
-package com.custom.dialog.test;
+package com.custom.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,26 +8,22 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.custom.dialog.Extras.DialogType;
-import com.custom.dialog.R;
-
 import java.util.Objects;
 
-public class TestCustomDialog extends Dialog {
+public class CustomDialog extends Dialog {
 
     private final String cbText;
     private final String header;
     private final String title;
     private final DialogType dialogType;
 
-    public TestCustomDialog(@NonNull Context context, DialogType dialogType,
-                            String title , String header , String cbText) {
+    public CustomDialog(@NonNull Context context, DialogType dialogType,
+                        String title , String header , String cbText) {
         super(context);
         this.dialogType = dialogType;
         this.title = title;
@@ -63,6 +59,7 @@ public class TestCustomDialog extends Dialog {
         cancel.setOnClickListener(v -> showToastAndDismiss("TOAST 3"));
 
         setDialogSize();
+
     }
 
     private void setButtonVisibility(CheckBox checkBox,Button cancel,Button ok,Button ok2) {
