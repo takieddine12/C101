@@ -3,11 +3,11 @@ package com.custom.dialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import com.custom.dialog.dialogs.CustomApprovalDialog;
 import com.custom.dialog.dialogs.CustomBaseDialog;
+import com.custom.dialog.dialogs.CustomDialog;
 import com.custom.dialog.dialogs.CustomButtonsDialog;
 import com.custom.dialog.dialogs.CustomInfoDialog;
 import com.custom.dialog.dialogs.CustomResetDialog;
@@ -27,14 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         baseDialogBtn.setOnClickListener(v -> {
-            CustomBaseDialog customBaseDialog = new CustomResetDialog(MainActivity.this,
+            CustomBaseDialog customBaseDialog = new CustomBaseDialog(MainActivity.this,
                     "Lorem Ipsum Title 1", "Lorem Ipsum Header 1", null);
             customBaseDialog.show();
         });
         infoDialogBtn.setOnClickListener(v -> {
-            CustomInfoDialog customBaseDialog = new CustomInfoDialog(MainActivity.this,
+            CustomInfoDialog customInfoDialog = new CustomInfoDialog(MainActivity.this,
                     "Lorem Ipsum Title 2", "Lorem Ipsum Header 2", null);
-            customBaseDialog.show();
+            customInfoDialog.show();
         });
         approvalDialogBtn.setOnClickListener(v -> {
             CustomApprovalDialog customApprovalDialog = new CustomApprovalDialog(MainActivity.this,

@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:text="Cancel" />
+            android:text="@string/cancel" />
 
         <Space
             android:layout_width="10dp"
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:text="Ok" />
+            android:text="@string/ok" />
 
         <Space
             android:layout_width="10dp"
@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:text="Ok2" />
+            android:text="@string/ok2" />
 
 
     </LinearLayout>

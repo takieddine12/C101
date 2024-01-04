@@ -1,6 +1,7 @@
 package com.custom.dialog.dialogs;
 
 
+
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -9,19 +10,18 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-
 import com.custom.dialog.R;
 
 import java.util.Objects;
 
-public class CustomBaseDialog extends CustomDialog {
+public class CustomDialog extends Dialog {
 
     private final String cbText;
     private final String header;
     private final String title;
 
-    public CustomBaseDialog(@NonNull Context context, String title, String header, String cbText) {
-        super(context,title,header,cbText);
+    public CustomDialog(@NonNull Context context, String title, String header, String cbText) {
+        super(context);
         this.title = title;
         this.header = header;
         this.cbText = cbText;
@@ -33,13 +33,6 @@ public class CustomBaseDialog extends CustomDialog {
         setContentView(R.layout.custom_dialog_layout);
 
         Objects.requireNonNull(getWindow()).setBackgroundDrawableResource(R.drawable.dialog_insets);
-
-        TextView messageTextView = findViewById(R.id.messageTextView);
-        TextView headerTextView = findViewById(R.id.headerTextView);
-
-        messageTextView.setText(title);
-        headerTextView.setText(header);
-
         setDialogSize();
 
     }

@@ -1,17 +1,15 @@
 package com.custom.dialog.dialogs;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import com.custom.dialog.R;
 
- public class CustomInfoDialog extends CustomBaseDialog {
+ public class CustomInfoDialog extends CustomDialog {
 
     private final String cbText;
     private final String header;
@@ -24,7 +22,6 @@ import com.custom.dialog.R;
 
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +33,7 @@ import com.custom.dialog.R;
         messageTextView.setText(title);
         headerTextView.setText(header);
         okButton.setVisibility(View.VISIBLE);
+
 
         okButton.setOnClickListener(v -> {
             Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();

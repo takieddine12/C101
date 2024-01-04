@@ -1,20 +1,16 @@
 package com.custom.dialog.dialogs;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import com.custom.dialog.R;
 
-public class CustomApprovalDialog extends CustomBaseDialog {
+public class CustomApprovalDialog extends CustomDialog {
 
 
     private final String cbText;
@@ -30,6 +26,7 @@ public class CustomApprovalDialog extends CustomBaseDialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         TextView messageTextView = findViewById(R.id.messageTextView);
         Button okButton = findViewById(R.id.okBtn);

@@ -1,18 +1,16 @@
 package com.custom.dialog.dialogs;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import com.custom.dialog.R;
 
 
-public class CustomButtonsDialog extends CustomBaseDialog {
+public class CustomButtonsDialog extends CustomDialog {
 
     private final String cbText;
     private final String header;
@@ -40,6 +38,7 @@ public class CustomButtonsDialog extends CustomBaseDialog {
         okButton.setVisibility(View.VISIBLE);
         cancel.setVisibility(View.VISIBLE);
         ok2.setVisibility(View.VISIBLE);
+
 
         cancel.setOnClickListener(v -> {
             Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();

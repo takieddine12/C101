@@ -3,4 +3,7 @@
     <string name="this_is_dialog_for_text_only">This is dialog for text only</string>
     <string name="this_is_dialog_for_one_button">This is dialog for one button</string>
     <string name="this_is_dialog_for_two_buttons">This is dialog for Two Buttons</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="ok2">Ok2</string>
 </resources>
