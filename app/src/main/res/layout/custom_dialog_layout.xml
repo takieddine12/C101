@@ -27,7 +27,7 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"/>
+        android:visibility="gone"/>
 
 
     <LinearLayout
@@ -41,7 +41,7 @@
             android:id="@+id/cancelBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="visible"
+            android:visibility="gone"
             android:text="Cancel" />
 
         <Space
@@ -52,7 +52,7 @@
             android:id="@+id/okBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="visible"
+            android:visibility="gone"
             android:text="Ok" />
 
         <Space
@@ -63,7 +63,7 @@
             android:id="@+id/okBtn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="visible"
+            android:visibility="gone"
             android:text="Ok2" />
 
 
