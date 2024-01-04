@@ -43,19 +43,13 @@ public class CustomApprovalDialog extends CustomBaseDialog {
         okButton.setVisibility(View.VISIBLE);
         cancel.setVisibility(View.VISIBLE);
 
-        okButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
-                dismiss();
-            }
+        okButton.setOnClickListener(v -> {
+            Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
+            dismiss();
         });
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
-                dismiss();
-            }
+        cancel.setOnClickListener(v -> {
+            Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
+            dismiss();
         });
 
 

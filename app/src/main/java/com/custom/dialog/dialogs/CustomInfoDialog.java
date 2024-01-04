@@ -37,12 +37,9 @@ import com.custom.dialog.R;
         headerTextView.setText(header);
         okButton.setVisibility(View.VISIBLE);
 
-        okButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
-                dismiss();
-            }
+        okButton.setOnClickListener(v -> {
+            Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
+            dismiss();
         });
 
 

@@ -45,22 +45,21 @@ public class CustomResetDialog extends CustomBaseDialog {
         messageTextView.setText(title);
         checkBox.setText(cbText);
 
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    Toast.makeText(getContext(),"Checked",Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(getContext(),"Unchecked",Toast.LENGTH_LONG).show();
-                }
+
+        checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked){
+                Toast.makeText(getContext(),"Checked",Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getContext(),"Unchecked",Toast.LENGTH_LONG).show();
             }
         });
-        okButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
-                dismiss();
-            }
+        cancel.setOnClickListener(v -> {
+            Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
+            dismiss();
+        });
+        okButton.setOnClickListener(v -> {
+            Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
+            dismiss();
         });
 
 
