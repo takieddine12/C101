@@ -16,15 +16,10 @@ import java.util.Objects;
 
 public class CustomDialog extends Dialog {
 
-    private final String cbText;
-    private final String header;
-    private final String title;
 
-    public CustomDialog(@NonNull Context context, String title, String header, String cbText) {
+
+    public CustomDialog(@NonNull Context context) {
         super(context);
-        this.title = title;
-        this.header = header;
-        this.cbText = cbText;
     }
 
     @Override

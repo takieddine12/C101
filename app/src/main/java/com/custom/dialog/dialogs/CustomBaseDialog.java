@@ -21,7 +21,7 @@ public class CustomBaseDialog extends CustomDialog {
     private final String title;
 
     public CustomBaseDialog(@NonNull Context context, String title, String header, String cbText) {
-        super(context,title,header,cbText);
+        super(context);
         this.title = title;
         this.header = header;
         this.cbText = cbText;

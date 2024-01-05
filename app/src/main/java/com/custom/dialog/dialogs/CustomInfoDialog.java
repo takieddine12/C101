@@ -15,7 +15,7 @@ import com.custom.dialog.R;
     private final String header;
     private final String title;
     public CustomInfoDialog(@NonNull Context context,String title , String header , String cbText) {
-        super(context,title,header,cbText);
+        super(context);
         this.title = title;
         this.header = header;
         this.cbText = cbText;
