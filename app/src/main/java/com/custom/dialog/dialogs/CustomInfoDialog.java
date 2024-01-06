@@ -14,12 +14,11 @@ import com.custom.dialog.R;
     private final String cbText;
     private final String header;
     private final String title;
-    public CustomInfoDialog(@NonNull Context context,String title , String header , String cbText) {
+    public CustomInfoDialog(@NonNull Context context,Builder builder) {
         super(context);
-        this.title = title;
-        this.header = header;
-        this.cbText = cbText;
-
+        this.title = builder.title;
+        this.header = builder.header;
+        this.cbText = builder.cbText;
     }
 
     @Override
@@ -42,5 +41,41 @@ import com.custom.dialog.R;
 
 
     }
+
+
+     public static class Builder {
+         private String cbText;
+         private String header;
+         private String title;
+
+         private Context context;
+         public static CustomInfoDialog.Builder newInstance(Context context) {
+             return new CustomInfoDialog.Builder(context);
+         }
+
+         private Builder(Context context) {
+             this.context = context;
+         }
+
+         public Builder setCbText(String cbText) {
+             this.cbText = cbText;
+             return this;
+         }
+
+         public Builder setHeader(String header) {
+             this.header = header;
+             return this;
+         }
+
+         public Builder setTitle(String title) {
+             this.title = title;
+             return this;
+         }
+
+         public CustomInfoDialog build() {
+             return new CustomInfoDialog(context, this);
+         }
+     }
+
 
 }

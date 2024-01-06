@@ -27,32 +27,44 @@ public class MainActivity extends AppCompatActivity {
 
 
         baseDialogBtn.setOnClickListener(v -> {
-            CustomBaseDialog customBaseDialog = new CustomBaseDialog(MainActivity.this,
-                    "Lorem Ipsum Title 1", "Lorem Ipsum Header 1", null);
-            customBaseDialog.show();
+            CustomBaseDialog.Builder.newInstance(this)
+                    .setCbText(null)
+                    .setHeader("Lorem Ipsum Header 1")
+                    .setTitle("Lorem Ipsum Title 1")
+                    .build()
+                    .show();
         });
         infoDialogBtn.setOnClickListener(v -> {
-            CustomInfoDialog customInfoDialog = new CustomInfoDialog(MainActivity.this,
-                    "Lorem Ipsum Title 2", "Lorem Ipsum Header 2", null);
-            customInfoDialog.show();
+            CustomInfoDialog.Builder.newInstance(this)
+                    .setCbText(null)
+                    .setHeader("Lorem Ipsum Header 2")
+                    .setTitle("Lorem Ipsum Title 2")
+                    .build()
+                    .show();
         });
         approvalDialogBtn.setOnClickListener(v -> {
-            CustomApprovalDialog customApprovalDialog = new CustomApprovalDialog(MainActivity.this,
-                    "Lorem Ipsum Title 3", "Lorem Ipsum Header 3", null
-            );
-            customApprovalDialog.show();
+            CustomApprovalDialog.Builder.newInstance(this)
+                    .setCbText(null)
+                    .setHeader("Lorem Ipsum Title 3")
+                    .setTitle("Lorem Ipsum Header 3")
+                    .build()
+                    .show();
         });
         resetDialogBtn.setOnClickListener(v -> {
-            CustomResetDialog customResetDialog = new CustomResetDialog(MainActivity.this,
-                    "Lorem Ipsum Title 4", "Lorem Ipsum Header 4", "Reset Dialog CHECK BOX"
-            );
-            customResetDialog.show();
+            CustomResetDialog.Builder.newInstance(this)
+                    .setCbText("Reset Dialog CHECK BOX")
+                    .setHeader("Lorem Ipsum Title 4")
+                    .setTitle("Lorem Ipsum Header 4")
+                    .build()
+                    .show();
         });
         buttonsDialog.setOnClickListener(v -> {
-            CustomButtonsDialog customButtonsDialog = new CustomButtonsDialog(
-                    MainActivity.this,"Lorem Ipsum Title 5", "Lorem Ipsum Header 5", null
-            );
-            customButtonsDialog.show();
+            CustomButtonsDialog.Builder.newInstance(this)
+                    .setCbText(null)
+                    .setHeader("Lorem Ipsum Title 5")
+                    .setTitle("Lorem Ipsum Header 5")
+                    .build()
+                    .show();
         });
 
     }

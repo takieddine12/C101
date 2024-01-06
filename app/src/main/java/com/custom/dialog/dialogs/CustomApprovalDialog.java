@@ -16,11 +16,11 @@ public class CustomApprovalDialog extends CustomDialog {
     private final String cbText;
     private final String header;
     private final String title;
-    public CustomApprovalDialog(@NonNull Context context,String title , String header , String cbText) {
+    public CustomApprovalDialog(@NonNull Context context,Builder builder) {
         super(context);
-        this.title = title;
-        this.header = header;
-        this.cbText = cbText;
+        this.title = builder.title;
+        this.header = builder.header;
+        this.cbText = builder.cbText;
     }
 
     @Override
@@ -52,5 +52,38 @@ public class CustomApprovalDialog extends CustomDialog {
 
     }
 
+    public static class Builder {
+        private String cbText;
+        private String header;
+        private String title;
+
+        private Context context;
+        public static Builder newInstance(Context context) {
+            return new Builder(context);
+        }
+
+        private Builder(Context context) {
+            this.context = context;
+        }
+
+        public Builder setCbText(String cbText) {
+            this.cbText = cbText;
+            return this;
+        }
+
+        public Builder setHeader(String header) {
+            this.header = header;
+            return this;
+        }
+
+        public Builder setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+
+        public CustomApprovalDialog build() {
+            return new CustomApprovalDialog(context, this);
+        }
+    }
 
 }
