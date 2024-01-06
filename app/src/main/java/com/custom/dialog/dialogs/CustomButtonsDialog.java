@@ -12,12 +12,19 @@ import com.custom.dialog.R;
 
 public class CustomButtonsDialog extends CustomDialog {
 
+    private final String positiveButtonText;
+
+    private final String positiveButtonText2;
+    private final String negativeButtonText;
     private final String header;
     private final String title;
     public CustomButtonsDialog(@NonNull Context context,Builder builder) {
         super(context);
         this.title = builder.title;
         this.header = builder.header;
+        this.positiveButtonText = builder.positiveButtonText;
+        this.positiveButtonText2 = builder.positiveButtonText2;
+        this.negativeButtonText = builder.negativeButtonText;
     }
 
 
@@ -37,6 +44,10 @@ public class CustomButtonsDialog extends CustomDialog {
         cancel.setVisibility(View.VISIBLE);
         ok2.setVisibility(View.VISIBLE);
 
+        okButton.setText(positiveButtonText);
+        ok2.setText(positiveButtonText2);
+        cancel.setText(negativeButtonText);
+
 
         cancel.setOnClickListener(v -> {
             Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
@@ -55,6 +66,9 @@ public class CustomButtonsDialog extends CustomDialog {
 
 
     public static class Builder {
+        private String positiveButtonText;
+        private String positiveButtonText2;
+        private String negativeButtonText;
         private String header;
         private String title;
 
@@ -74,6 +88,21 @@ public class CustomButtonsDialog extends CustomDialog {
 
         public Builder setTitle(String title) {
             this.title = title;
+            return this;
+        }
+
+        public Builder setPositiveButtonText(String positiveButtonText) {
+            this.positiveButtonText = positiveButtonText;
+            return this;
+        }
+
+        public Builder setPositiveButtonText2(String positiveButtonText2) {
+            this.positiveButtonText2 = positiveButtonText2;
+            return this;
+        }
+
+        public Builder setNegativeButtonText(String negativeButtonText) {
+            this.negativeButtonText = negativeButtonText;
             return this;
         }
 

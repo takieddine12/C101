@@ -11,13 +11,14 @@ import com.custom.dialog.R;
 
  public class CustomInfoDialog extends CustomDialog {
 
-
+     private final String positiveButtonText;
     private final String header;
     private final String title;
     public CustomInfoDialog(@NonNull Context context,Builder builder) {
         super(context);
         this.title = builder.title;
         this.header = builder.header;
+        this.positiveButtonText  = builder.positiveButtonText;
     }
 
     @Override
@@ -32,6 +33,8 @@ import com.custom.dialog.R;
         headerTextView.setText(header);
         okButton.setVisibility(View.VISIBLE);
 
+        okButton.setText(positiveButtonText);
+
 
         okButton.setOnClickListener(v -> {
             Toast.makeText(getContext(),"Simple Toast",Toast.LENGTH_LONG).show();
@@ -43,6 +46,8 @@ import com.custom.dialog.R;
 
 
      public static class Builder {
+
+         private  String positiveButtonText;
          private String header;
          private String title;
 
@@ -62,6 +67,11 @@ import com.custom.dialog.R;
 
          public Builder setTitle(String title) {
              this.title = title;
+             return this;
+         }
+
+         public Builder setPositiveButtonText(String positiveButtonText) {
+             this.positiveButtonText = positiveButtonText;
              return this;
          }
 

@@ -16,6 +16,7 @@ import java.util.Objects;
 
 public class CustomBaseDialog extends CustomDialog {
 
+
     private final String header;
     private final String title;
     public CustomBaseDialog(Context context, Builder builder) {
@@ -53,6 +54,11 @@ public class CustomBaseDialog extends CustomDialog {
     }
 
     public static class Builder {
+
+        private String positiveButtonText;
+
+        private String positiveButtonText2;
+        private String negativeButtonText;
         private String header;
         private String title;
 
@@ -75,6 +81,22 @@ public class CustomBaseDialog extends CustomDialog {
             this.title = title;
             return this;
         }
+
+        public Builder setPositiveButtonText(String positiveButtonText) {
+            this.positiveButtonText = positiveButtonText;
+            return this;
+        }
+
+        public Builder setPositiveButtonText2(String positiveButtonText2) {
+            this.positiveButtonText2 = positiveButtonText2;
+            return this;
+        }
+
+        public Builder setNegativeButtonText(String negativeButtonText) {
+            this.negativeButtonText = negativeButtonText;
+            return this;
+        }
+
 
         public CustomBaseDialog build() {
             return new CustomBaseDialog(context, this);

@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             CustomInfoDialog.Builder.newInstance(this)
                     .setHeader("Lorem Ipsum Header 2")
                     .setTitle("Lorem Ipsum Title 2")
+                    .setPositiveButtonText("Ok")
                     .build()
                     .show();
         });
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
             CustomApprovalDialog.Builder.newInstance(this)
                     .setHeader("Lorem Ipsum Title 3")
                     .setTitle("Lorem Ipsum Header 3")
+                    .setPositiveButtonText("Ok")
+                    .setNegativeButtonText("Cancel")
                     .build()
                     .show();
         });
@@ -52,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
                     .setCbText("Reset Dialog CHECK BOX")
                     .setHeader("Lorem Ipsum Title 4")
                     .setTitle("Lorem Ipsum Header 4")
+                    .setPositiveButtonText("Ok")
+                    .setPositiveButtonText("Cancel")
                     .build()
                     .show();
         });
@@ -59,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
             CustomButtonsDialog.Builder.newInstance(this)
                     .setHeader("Lorem Ipsum Title 5")
                     .setTitle("Lorem Ipsum Header 5")
+                    .setPositiveButtonText("Ok")
+                    .setPositiveButtonText2("Ok2")
+                    .setNegativeButtonText("Cancel")
                     .build()
                     .show();
         });

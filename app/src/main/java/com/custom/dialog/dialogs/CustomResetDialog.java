@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import com.custom.dialog.R;
 
 public class CustomResetDialog extends CustomDialog {
+
+    private final String positiveButtonText;
+    private final String negativeButtonText;
     private final String cbText;
     private final String header;
     private final String title;
@@ -19,6 +22,8 @@ public class CustomResetDialog extends CustomDialog {
         this.title = builder.title;
         this.header = builder.header;
         this.cbText = builder.cbText;
+        this.positiveButtonText = builder.positiveButtonText;
+        this.negativeButtonText = builder.negativeButtonText;
 
     }
 
@@ -41,6 +46,8 @@ public class CustomResetDialog extends CustomDialog {
 
         messageTextView.setText(title);
         checkBox.setText(cbText);
+        okButton.setText(positiveButtonText);
+        cancel.setText(negativeButtonText);
 
 
         checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -63,6 +70,10 @@ public class CustomResetDialog extends CustomDialog {
     }
 
     public static class Builder {
+
+        private String positiveButtonText;
+        private String negativeButtonText;
+
         private String cbText;
         private String header;
         private String title;
@@ -88,6 +99,16 @@ public class CustomResetDialog extends CustomDialog {
 
         public Builder setTitle(String title) {
             this.title = title;
+            return this;
+        }
+
+        public Builder setNegativeButtonText(String negativeButtonText) {
+            this.negativeButtonText = negativeButtonText;
+            return this;
+        }
+
+        public Builder setPositiveButtonText(String positiveButtonText) {
+            this.positiveButtonText = positiveButtonText;
             return this;
         }
 

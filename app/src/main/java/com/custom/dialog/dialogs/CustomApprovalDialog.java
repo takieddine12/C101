@@ -12,12 +12,16 @@ import com.custom.dialog.R;
 
 public class CustomApprovalDialog extends CustomDialog {
 
+    private final String positiveButtonText;
+    private final String negativeButtonText;
     private final String header;
     private final String title;
     public CustomApprovalDialog(@NonNull Context context,Builder builder) {
         super(context);
         this.title = builder.title;
         this.header = builder.header;
+        this.positiveButtonText = builder.positiveButtonText;
+        this.negativeButtonText = builder.negativeButtonText;
     }
 
     @Override
@@ -32,6 +36,8 @@ public class CustomApprovalDialog extends CustomDialog {
 
         messageTextView.setText(title);
         headerTextView.setText(header);
+        okButton.setText(positiveButtonText);
+        cancel.setText(negativeButtonText);
 
         messageTextView.setText(title);
         okButton.setVisibility(View.VISIBLE);
@@ -51,6 +57,8 @@ public class CustomApprovalDialog extends CustomDialog {
 
     public static class Builder {
 
+        private String positiveButtonText;
+        private String negativeButtonText;
         private String header;
         private String title;
 
@@ -70,6 +78,16 @@ public class CustomApprovalDialog extends CustomDialog {
 
         public Builder setTitle(String title) {
             this.title = title;
+            return this;
+        }
+
+        public Builder setPositiveButtonText(String positiveButtonText) {
+            this.positiveButtonText = positiveButtonText;
+            return this;
+        }
+
+        public Builder setNegativeButtonText(String negativeButtonText) {
+            this.negativeButtonText = negativeButtonText;
             return this;
         }
 
