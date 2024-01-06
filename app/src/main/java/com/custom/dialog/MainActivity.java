@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         baseDialogBtn.setOnClickListener(v -> {
             CustomBaseDialog.Builder.newInstance(this)
-                    .setCbText(null)
                     .setHeader("Lorem Ipsum Header 1")
                     .setTitle("Lorem Ipsum Title 1")
                     .build()
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         });
         infoDialogBtn.setOnClickListener(v -> {
             CustomInfoDialog.Builder.newInstance(this)
-                    .setCbText(null)
                     .setHeader("Lorem Ipsum Header 2")
                     .setTitle("Lorem Ipsum Title 2")
                     .build()
@@ -44,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         });
         approvalDialogBtn.setOnClickListener(v -> {
             CustomApprovalDialog.Builder.newInstance(this)
-                    .setCbText(null)
                     .setHeader("Lorem Ipsum Title 3")
                     .setTitle("Lorem Ipsum Header 3")
                     .build()
@@ -60,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         });
         buttonsDialog.setOnClickListener(v -> {
             CustomButtonsDialog.Builder.newInstance(this)
-                    .setCbText(null)
                     .setHeader("Lorem Ipsum Title 5")
                     .setTitle("Lorem Ipsum Header 5")
                     .build()

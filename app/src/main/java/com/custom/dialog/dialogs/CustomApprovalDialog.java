@@ -12,15 +12,12 @@ import com.custom.dialog.R;
 
 public class CustomApprovalDialog extends CustomDialog {
 
-
-    private final String cbText;
     private final String header;
     private final String title;
     public CustomApprovalDialog(@NonNull Context context,Builder builder) {
         super(context);
         this.title = builder.title;
         this.header = builder.header;
-        this.cbText = builder.cbText;
     }
 
     @Override
@@ -53,7 +50,7 @@ public class CustomApprovalDialog extends CustomDialog {
     }
 
     public static class Builder {
-        private String cbText;
+
         private String header;
         private String title;
 
@@ -64,11 +61,6 @@ public class CustomApprovalDialog extends CustomDialog {
 
         private Builder(Context context) {
             this.context = context;
-        }
-
-        public Builder setCbText(String cbText) {
-            this.cbText = cbText;
-            return this;
         }
 
         public Builder setHeader(String header) {
